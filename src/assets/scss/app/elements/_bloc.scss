@@ -1,0 +1,61 @@
+
+.srv-bloc{
+  width: 80%;
+  border: 1px solid $white;
+  padding: 13px 20px 16px 20px;
+  text-align: justify;
+  margin: 30px auto;
+  position: relative;
+  transition: 0.5s;
+
+  p{
+    margin-bottom: 20px;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+
+  a{
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+
+  &::before{
+    content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      width: 60px;
+      height: 60px;
+      left: 25px;
+      top: -26px;
+      background-size: 44px;
+  }
+
+  &.formation::before{
+    background-image: url(./src/assets/img/icones/icone-formations.svg);
+  }
+
+  &.web::before{
+    background-image: url(./src/assets/img/icones/icone-web.svg);
+  }
+
+  &.print::before{
+    background-image: url(./src/assets/img/icones/icone-print.svg);
+  }
+
+  &.audit::before{
+    background-image: url(./src/assets/img/icones/icone-audit.svg);
+  }
+  &:hover{
+      p, a{
+      opacity: 1;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .srv-bloc {
+      width: 100%;
+      margin: 30px 0;
+  }
+}

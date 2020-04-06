@@ -1,0 +1,98 @@
+/**** COLOR ****/
+$black: #000;
+$white: #fff;
+$blue:#2F3C4D;
+$or:#EDC88C;
+$light-grey:#FBFBFB;
+$grey:#4f5051;
+
+body{
+  margin:0 auto;
+  @include font(300);
+  font-size: 14px;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  li{
+  list-style-type: none;
+  }
+}
+
+a{
+  font-size: 14px;
+  @include font(300);
+  text-decoration: none;
+  color:$blue;
+  position: relative;
+  color:$blue;
+
+  &.more::before{
+    content:'';
+    background-image: url(./src/assets/img/icones/icone-arrow.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    right: -33px;
+    top: 4px;
+    transition: 0.5s;
+
+  }
+
+ &.more.txt-white::before{
+    content:'';
+    background-image: url(./src/assets/img/icones/icone-arrow-white.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    right: -33px;
+    top: 4px;
+  }
+
+  &:hover:before{
+        transform: translateX(10px);
+  }
+}
+
+
+
+p{
+  color:$grey;
+  font-size: 14px;
+
+  &.summary{
+    margin: 20px 0;
+  }
+}
+
+
+.txt-justify{
+    text-align: justify;
+  }
+
+.txt-center{
+   text-align: center;
+  }
+
+
+.txt-white {
+  color: $white!important;
+}
+.spad {
+  padding: 120px 0;
+}
+
+.bg-blue{
+  background: $blue;
+}
+
+.overlay{
+  &::before{
+    content: '';
+    @include overlay($blue, 0.9);
+  }
+}

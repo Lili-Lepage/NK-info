@@ -1,0 +1,23 @@
+.sub-footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color:$blue;
+  background: $white;
+
+  p{
+    text-align: center;
+  }
+
+  a::before{
+    content:'';
+    background-image: none;
+  }
+}
+
+footer.main-footer{
+  .logo{
+    max-width: 190px;
+  }
+}

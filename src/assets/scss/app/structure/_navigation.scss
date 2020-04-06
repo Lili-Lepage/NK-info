@@ -1,0 +1,137 @@
+.header-nav{
+
+  .button_container {
+    position: fixed;
+    right: 2%;
+    height: 27px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &.active {
+      .top {
+        transform: translateY(11px) translateX(0) rotate(45deg);
+        background: $white;
+      }
+      .middle {
+        opacity: 0;
+        background: $white;
+      }
+
+      .bottom {
+        transform: translateY(-11px) translateX(0) rotate(-45deg);
+        background: $white;
+      }
+    }
+
+    span {
+    background: $grey;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition:  all .35s ease;
+    cursor: pointer;
+
+      &:nth-of-type(2) {
+        top: 11px;
+      }
+
+      &:nth-of-type(3) {
+        top: 22px;
+      }
+    }
+  }
+
+
+
+  nav{
+
+    background: $blue;
+    padding: 30px 34px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    bottom: 0;
+    width: 30%;
+    text-align: center;
+    transform: translateX(749px);
+    z-index:1;
+    transition:0.5s;
+    opacity:0;
+
+    ul{
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+
+      li {
+        margin: 17px 0;
+        line-height: 7;
+          a{
+            font-size: 24px;
+            font-weight: 100;
+            color:$white;
+            position: relative;
+            padding-bottom: 10px;
+
+            &:hover:after,
+             &:focus:after,
+             &:active:after {
+               width: 100%;
+             }
+
+            &:after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              width: 0%;
+              transform: translateX(-50%);
+              height: 2px;
+              background: $white;
+              transition: .35s;
+            }
+          }
+        }
+      }
+
+
+    &::before{
+      content: '';
+      background: $blue;
+      width: 223px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -87px;
+      z-index: -1;
+      transform: skew(0deg);
+      transition:0.5s;
+    }
+    &.open-nav{
+      opacity:1;
+      transform: translateX(0px);
+      opacity:1;
+      transition:0.5s;
+      transition-duration: 1s;
+      &::before{
+        content: '';
+        transform: skew(10deg);
+        transition:0.5s;
+        transition-delay:0.2s;
+        transition-duration: 1s;
+      }
+
+
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@mixin font($weight){
+  font-family: 'open-san';
+  font-weight: $weight;
+}
+
+@mixin overlay($color){
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:$color;
+  opacity:0.5;
+}
+
+
+@mixin losange($color, $width,$border,$borderColor){
+    height: $width;
+    width: $width;
+    background: $color;
+    border: $border solid $borderColor;
+    -ms-transform: rotate(45deg); /* Internet Explorer */
+    -moz-transform: rotate(45deg); /* Firefox */
+    -webkit-transform: rotate(45deg); /* Safari et Chrome */
+    -o-transform: rotate(45deg); /* Opera */
+    transform: rotate(45deg); /* Opera */
+}
+
+@mixin backgroundImg($name,$ext, $repeat, $size){
+  $url:"./src/assets/img/#{$name}.#{$ext}";
+  background-image:url($url);
+  background-repeat: $repeat;
+  background-size:$size;
+}
+
+@mixin overlay($color,$opacity){
+  background: $color;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity:$opacity;
+}

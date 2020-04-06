@@ -1,0 +1,19 @@
+header{
+position:fixed;
+background:$white;
+width:100%;
+padding: 20px 0px;
+top:0;
+z-index: 1;
+
+
+  .header-logo{
+    display: inline-block;
+    float: left;
+  }
+
+  .header-nav {
+    display: inline-block;
+    float: right;
+  }
+}

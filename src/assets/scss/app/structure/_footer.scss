@@ -20,4 +20,8 @@ footer.main-footer{
   .logo{
     max-width: 190px;
   }
+
+  @include sm{
+    text-align: center;
+  }
 }

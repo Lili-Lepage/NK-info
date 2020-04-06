@@ -54,7 +54,7 @@ a{
   }
 
   &:hover:before{
-        transform: translateX(10px);
+    @include translate(10px, 0);
   }
 }
 
@@ -72,6 +72,14 @@ p{
 
 .txt-justify{
     text-align: justify;
+  }
+
+  .txt-right{
+    text-align: right;
+  }
+
+  .txt-left{
+    text-align: left;
   }
 
 .txt-center{

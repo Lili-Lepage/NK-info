@@ -3,16 +3,6 @@
   font-weight: $weight;
 }
 
-@mixin overlay($color){
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  background:$color;
-  opacity:0.5;
-}
-
 
 @mixin losange($color, $width,$border,$borderColor){
     height: $width;
@@ -41,4 +31,45 @@
   left: 0;
   right: 0;
   opacity:$opacity;
+}
+
+
+@mixin translate($x, $y){
+
+  -ms-transform: translate($x, $y); /* Internet Explorer */
+  -moz-transform: translate($x, $y); /* Firefox */
+  -webkit-transform: translate($x, $y); /* Safari et Chrome */
+  -o-transform: translate($x, $y); /* Opera */
+  transform: translate($x, $y); /* Opera */
+}
+
+
+/**** MEDIA QUERIES ****/
+
+
+@mixin sm {
+   @media (max-width: 576px) {
+       @content;
+   }
+}
+
+
+@mixin md {
+   @media (max-width: 768px) {
+       @content;
+   }
+}
+
+// Large devices
+@mixin lg {
+   @media (max-width: 992px) {
+       @content;
+   }
+}
+
+// Extra large devices
+@mixin xl {
+   @media (min-width: 1200px) {
+       @content;
+   }
 }

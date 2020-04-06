@@ -16,7 +16,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      @include translate(-50%, -50%);
       display: inline-block;
     }
 
@@ -56,25 +56,47 @@
   /**** SECTION 1 ***/
 
 .section-1 {
+
+  .section-1_content{
+    margin-top: 38px;
+
+    @include lg{
+      margin-top: 0;
+    }
+
+    h2, h3, a{
+      @include translate(-90px, 0);
+      @include md {
+       @include translate(0, 0);
+      }
+    }
+
+  }
   .section-1_img {
         .img_background{
         position: absolute;
         z-index: -1;
-        transform: translate(-20px,-21px);
+        @include translate(-20px, -21px);
         opacity: 0.2;
+      }
+
+      @include md {
+       text-align: left;
       }
     }
 }
+
 
 
 /***** SECTION 2 ****/
 
 .section-2 {
   @include backgroundImg(header, jpg, no-repeat, cover);
-    h2+p{
-    margin-left: 19px;
-  }
-}
+
+  h2+p{
+     margin-left: 19px;
+   }
+ }
 
 /***** SECTION 3 ****/
 
@@ -149,11 +171,11 @@
       font-size: 30px;
       font-weight: 600;
       margin-bottom: 0;
-      transform: translateX(60px);
+      @include translate(60px, 0);
     }
     p{
       margin: 0;
-      transform: translateX(60px);
+      @include translate(60px, 0);
     }
   }
 }

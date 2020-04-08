@@ -4,16 +4,16 @@
 }
 
 
-@mixin losange($color, $width,$border,$borderColor){
+@mixin losange($color, $width,$border,$borderColor, $test:translate(0,0)){
     height: $width;
     width: $width;
     background: $color;
     border: $border solid $borderColor;
-    -ms-transform: rotate(45deg); /* Internet Explorer */
-    -moz-transform: rotate(45deg); /* Firefox */
-    -webkit-transform: rotate(45deg); /* Safari et Chrome */
-    -o-transform: rotate(45deg); /* Opera */
-    transform: rotate(45deg); /* Opera */
+    -ms-transform: rotate(45deg) $test; /* Internet Explorer */
+    -moz-transform: rotate(45deg) $test; /* Firefox */
+    -webkit-transform: rotate(45deg) $test; /* Safari et Chrome */
+    -o-transform: rotate(45deg) $test; /* Opera */
+    transform: rotate(45deg) $test; /* Opera */
 }
 
 @mixin backgroundImg($name,$ext, $repeat, $size){
@@ -41,6 +41,14 @@
   -webkit-transform: translate($x, $y); /* Safari et Chrome */
   -o-transform: translate($x, $y); /* Opera */
   transform: translate($x, $y); /* Opera */
+}
+
+@mixin transition($time){
+  transition:$time;
+  ms-transition: $time; /* Internet Explorer */
+  -moz-transition: $time; /* Firefox */
+  -webkit-transition: $time; /* Safari et Chrome */
+  -o-transition: $time; /* Opera */
 }
 
 

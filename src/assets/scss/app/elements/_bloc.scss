@@ -6,17 +6,17 @@
   text-align: justify;
   margin: 30px auto;
   position: relative;
-  transition: 0.5s;
+  @include transition(0.5s);
 
   p{
     margin-bottom: 20px;
     opacity: 0.7;
-    transition: 0.5s;
+    @include transition(0.5s);
   }
 
   a{
     opacity: 0.7;
-    transition: 0.5s;
+    @include transition(0.5s);
   }
 
   &::before{

@@ -1,10 +1,11 @@
 .btn-primary {
+  text-decoration: none;
   background: $or;
   border: 1px solid $or;
   color: $white;
   padding: 15px 30px;
   display: inline-block;
-  transition:0.5s;
+  @include transition(0.5s);
   margin: 20px 0;
 
   &:hover{
@@ -20,12 +21,13 @@
 
 
 .btn-second{
+  text-decoration: none;
   background: transparent;
   border: 1px solid $or;
   color: $or;
   padding: 15px 30px;
   display: inline-block;
-  transition:0.5s;
+  @include transition(0.5s);
   margin: 20px 0;
 
   &:hover{

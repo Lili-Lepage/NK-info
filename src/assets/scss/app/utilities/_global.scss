@@ -21,7 +21,10 @@ ul {
   }
 }
 
-a{
+a.link{
+  text-decoration: none;
+}
+a.more{
   font-size: 14px;
   @include font(300);
   text-decoration: none;
@@ -29,7 +32,7 @@ a{
   position: relative;
   color:$blue;
 
-  &.more::before{
+  &::before{
     content:'';
     background-image: url(./src/assets/img/icones/icone-arrow.svg);
     position: absolute;
@@ -42,7 +45,7 @@ a{
 
   }
 
- &.more.txt-white::before{
+ &.txt-white::before{
     content:'';
     background-image: url(./src/assets/img/icones/icone-arrow-white.svg);
     position: absolute;
@@ -57,6 +60,35 @@ a{
     @include translate(10px, 0);
   }
 }
+
+
+a.link{
+  font-size: 14px;
+  @include font(300);
+  text-decoration: none;
+  color:$blue;
+  position: relative;
+  color:$blue;
+
+  &:hover:after,
+   &:focus:after,
+   &:active:after {
+     width: 100%;
+   }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    transform: translateX(-50%);
+    height: 1px;
+    background: $white;
+    transition: .35s;
+  }
+}
+
 
 
 

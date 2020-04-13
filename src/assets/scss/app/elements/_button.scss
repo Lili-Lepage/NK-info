@@ -1,4 +1,4 @@
-.btn-primary {
+/*.btn-primary {
   text-decoration: none;
   background: $or;
   border: 1px solid $or;
@@ -39,4 +39,76 @@
   &::before{
     content: none;
   }
+}*/
+
+
+.btn-second {
+    border: 1px solid $or;
+    color:$or;
+    @include transition(0.5s);
+    padding: 15px 30px;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+
+    &:hover:after,
+     &:focus:after,
+     &:active:after {
+       width: 100%;
+     }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0%;
+      transform: translateX(-50%);
+      height: 100%;
+      background: $or;
+      transition: .35s;
+      z-index: -1;
+    }
+
+    &:hover{
+      color: $white;
+    }
+}
+
+
+.btn-primary {
+    border: 1px solid transparent;
+    color:$white;
+    background: $or;
+    @include transition(0.5s);
+    padding: 15px 30px;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+
+    &:hover:after,
+     &:focus:after,
+     &:active:after {
+       width: 100%;
+     }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0%;
+      transform: translateX(-50%);
+      height: 100%;
+      background: $white;
+      transition: .35s;
+      z-index: -1;
+    }
+
+    &:hover{
+      color: $or;
+    }
+
 }

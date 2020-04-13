@@ -3,7 +3,7 @@
   section.body-content_header{
   background-image: url('./src/assets/img/header.jpg');
   background-repeat: no-repeat;
-  height: 77vh;
+  height: 90vh;
   background-position: top, center;
   background-size: cover;
   margin-bottom: 100px;
@@ -20,7 +20,7 @@
       display: inline-block;
     }
 
-    svg#scroll{
+    /*svg#scroll{
       position: absolute;
       bottom: -78px;
       left: 50%;
@@ -37,7 +37,7 @@
         Animation-fill-mode:both;
         animation-play-state:running;
       }
-    }
+    }*/
 
 
     &::before{
@@ -50,7 +50,29 @@
       opacity:0.5;
       background-image: linear-gradient(to right, #2f3c4d, #2c2c3a, #241f26, #171216, #000000);
     }
+
+
+    .scroll-link{
+      position: absolute;
+      bottom: 45px;
+      left: 49%;
+      cursor: pointer;
+
+        .scroll {
+        animation-name: scroll;
+        animation-duration: 1.5s;
+        animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500);
+        animation-iteration-count: infinite;
+        transform-origin: 50% 20.5px;
+        will-change: transform;
+      }
+    }
+
   }
+
+
+
+
 
 
   /**** SECTION 1 ***/

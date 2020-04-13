@@ -21,9 +21,6 @@ ul {
   }
 }
 
-a.link{
-  text-decoration: none;
-}
 a.more{
   font-size: 14px;
   @include font(300);
@@ -135,4 +132,8 @@ p{
     content: '';
     @include overlay($blue, 0.9);
   }
+}
+
+.unscroll{
+  overflow: hidden;
 }

@@ -70,11 +70,6 @@
 
   }
 
-
-
-
-
-
   /**** SECTION 1 ***/
 
 .section-1 {
@@ -86,8 +81,8 @@
       margin-top: 0;
     }
 
-    h2, h3, a{
-      @include translate(-90px, 0);
+    .left{
+      //@include translate(-90px, 0);
       @include md {
        @include translate(0, 0);
       }

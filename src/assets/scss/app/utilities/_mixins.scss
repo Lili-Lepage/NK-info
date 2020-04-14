@@ -43,12 +43,12 @@
   transform: translate($x, $y); /* Opera */
 }
 
-@mixin transition($time){
-  transition:$time;
-  ms-transition: $time; /* Internet Explorer */
-  -moz-transition: $time; /* Firefox */
-  -webkit-transition: $time; /* Safari et Chrome */
-  -o-transition: $time; /* Opera */
+@mixin transition($time, $type){
+  transition:$time $type;
+  ms-transition: $time $type; /* Internet Explorer */
+  -moz-transition: $time $type; /* Firefox */
+  -webkit-transition: $time $type; /* Safari et Chrome */
+  -o-transition: $time $type; /* Opera */
 }
 
 

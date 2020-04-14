@@ -45,18 +45,18 @@
 .btn-second {
     border: 1px solid $or;
     color:$or;
-    @include transition(0.5s);
+    @include transition(0.3s, ease-out);
     padding: 15px 30px;
     text-decoration: none;
     position: relative;
     display: inline-block;
     margin: 20px 0;
-    overflow: hidden;
 
     &:hover:after,
      &:focus:after,
      &:active:after {
        width: 100%;
+       opacity: 1;
      }
 
     &:after {
@@ -69,8 +69,9 @@
       left: 50%;
       right: 50%;
       transform: translateX(-50%) translateY(0);
-      @include transition(0.5s);
+      @include transition(0.3s, ease-out);
       z-index: -1;
+      opacity: 0;
     }
 
     &:hover{
@@ -80,35 +81,51 @@
 
 
 .btn-primary {
-    border: 1px solid transparent;
+    border: 1px solid $or;
     color:$white;
-    background: $or;
-    @include transition(0.5s);
+    @include transition(0.5s, ease-in);
     padding: 15px 30px;
     text-decoration: none;
     position: relative;
     display: inline-block;
     margin: 20px 0;
-    overflow: hidden;
 
     &:hover:after,
      &:focus:after,
-     &:active:after {
-       width: 100%;
+     &:active:after,
+     &:hover:before,
+      &:focus:before,
+      &:active:before,{
+       width: 0%;
+       opacity: 0;
      }
 
     &:after {
       content: '';
-      background-color: $white;
+      background-color: $or;
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 0%;
-      left: 50%;
-      right: 50%;
-      transform: translateX(-50%) translateY(0);
-      @include transition(0.5s);
+      width: 100%;
+      right: 0;
+      @include transition(0.5s, ease-out);
+      overflow: hidden;
       z-index: -1;
+      opacity: 1;
+      }
+
+    &::before{
+      content: '';
+      background-color: $or;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      @include transition(0.5s, ease-out);
+      overflow: hidden;
+      z-index: -1;
+      opacity: 1;
     }
 
     &:hover{

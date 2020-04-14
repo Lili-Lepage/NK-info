@@ -51,6 +51,7 @@
     position: relative;
     display: inline-block;
     margin: 20px 0;
+    overflow: hidden;
 
     &:hover:after,
      &:focus:after,
@@ -60,14 +61,15 @@
 
     &:after {
       content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0%;
-      transform: translateX(-50%);
-      height: 100%;
       background: $or;
-      transition: .35s;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0%;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%) translateY(0);
+      @include transition(0.5s);
       z-index: -1;
     }
 
@@ -87,6 +89,7 @@
     position: relative;
     display: inline-block;
     margin: 20px 0;
+    overflow: hidden;
 
     &:hover:after,
      &:focus:after,
@@ -96,14 +99,15 @@
 
     &:after {
       content: '';
+      background-color: $white;
       position: absolute;
+      top: 0;
       bottom: 0;
-      left: 50%;
       width: 0%;
-      transform: translateX(-50%);
-      height: 100%;
-      background: $white;
-      transition: .35s;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%) translateY(0);
+      @include transition(0.5s);
       z-index: -1;
     }
 

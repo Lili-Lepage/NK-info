@@ -25,16 +25,18 @@ $('#toggle').click(function() {
     $('.main-nav').toggleClass('open-nav');
       if (window.matchMedia("(max-width:"+lg+"px)").matches) {
         $('html').toggleClass('unscroll');
-      }else{
-        //  $('html').removeClass('unscroll');
       }
   });
 
-
     $(window).resize(function(){
-      if (window.matchMedia("(min-width:993px)").matches && $('.main-nav').hasClass('open-nav')) {
-        $('html').removeClass('unscroll');
-    }
+      if($('.main-nav').hasClass('open-nav')){
+        if (window.matchMedia("(max-width:"+lg+"px)").matches) {
+          $('html').addClass('unscroll');
+        }else {
+          $('html').removeClass('unscroll');
+        }
+
+      }
   });
 
 

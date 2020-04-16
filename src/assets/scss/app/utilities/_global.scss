@@ -123,8 +123,16 @@ p{
   padding: 120px 0;
 }
 
+/** background **/
+
 .bg-blue{
   background: $blue;
+  z-index: 0;
+}
+
+.bg-grey{
+  background-color: $light-grey;
+  z-index: 0;
 }
 
 .overlay{

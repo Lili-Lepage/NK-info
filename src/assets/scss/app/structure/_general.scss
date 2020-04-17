@@ -8,6 +8,13 @@
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
   padding-left: 30px;
   padding-right: 30px;
+
+&:not(.header){
+  @include sm{
+    padding:0px;
+  }
+}
+
 }
 
 /*** sections ***/

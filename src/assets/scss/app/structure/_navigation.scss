@@ -105,18 +105,17 @@
               transform: translateX(-50%);
               height: 2px;
               background: $white;
-              @include transition(0.35s) ease-out;
+              @include transition(0.35s, ease-out);
             }
             &.current{
-              color: $or;
               &::after{
                 content: '';
                 position: absolute;
                 bottom: 0;
                 left: 50%;
                 width: 100%;
-                height: 1px;
-                background: $or;
+                height: 2px;
+                background: $white;
                 opacity: 1;
                 @include transition(0.35s, ease-out);
               }
@@ -136,7 +135,7 @@
       left: -87px;
       z-index: -1;
       transform: skew(0deg);
-      @include transition(0.5s) ease-out;
+      @include transition(0.5s, ease-out);
 
       @include lg{
           display: none;
@@ -146,12 +145,12 @@
       opacity:1;
       transform: translateX(0px);
       opacity:1;
-      @include transition(0.5s) ease-out;
+      @include transition(0.5s, ease-out);
       transition-duration: 1s;
       &::before{
         content: '';
         transform: skew(10deg);
-        @include transition(0.5s ease-out);
+        @include transition(0.5s, ease-out);
         transition-delay:0.2s;
         transition-duration: 1s;
       }

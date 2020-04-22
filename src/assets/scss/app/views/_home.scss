@@ -17,26 +17,6 @@
       display: inline-block;
     }
 
-    /*svg#scroll{
-      position: absolute;
-      bottom: -78px;
-      left: 50%;
-      right: 50%;
-      cursor:pointer;
-
-      path.cls-4{
-        animation-name: slidingDown;
-        animation-duration:1s;
-        animation-timing-function: ease-in-out;
-        animation-delay:0s;
-        animation-iteration-count:infinite;
-        animation-direction:alternate;
-        Animation-fill-mode:both;
-        animation-play-state:running;
-      }
-    }*/
-
-
     &::before{
       content:'';
       position:absolute;
@@ -117,51 +97,39 @@
 
 /***** SECTION 3 ****/
 
-/*.section-3 .section-1_img{
-
-  .section-1_img_content{
-    position: relative;
-    background: url(./src/assets/img/image-1.png);
-    max-width: 311px;
-    max-height: 323px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100%;
-    width: 100%;
-
-
-  &::before{
-    content:'';
-    @include losange(none, 100px, 4px, $or);
-    position: absolute;
-    bottom: 12px;
-    left: 38px;
-  }
-
-    &::after{
-      content:'';
-      @include losange(none, 200px, 5px, $blue);
-      position: absolute;
-      z-index: -1;
-      right: 173px;
-      top: 41px;
-      left: 138px;
-      }
-    }
-  }*/
-
-
 
 .section-3 .section-3_img{
   position: relative;
   .section-3_img_content{
     position: relative;
     display: inline-block;
+
+      &::after{
+        content:'';
+        @include losange(none, 210px, 5px, $blue);
+        top: 47px;
+        right: -5px;
+        z-index: -1;
+        position: absolute;
+      }
+
+      &::before{
+        content:'';
+        @include losange(none, 130px, 5px, $or);
+        top: 195px;
+        position: absolute;
+        left: 26px;
+
+        @include lg{
+          top: 132px;
+        }
+      }
+
   }
   img{
     max-width: 100%;
   }
-  .losange-blue{
+  /*.losange-blue{
     position: absolute;
     top: 15%;
     left: 36%;
@@ -172,7 +140,7 @@
     top: 60%;
     position: absolute;
     left: 5%
-  }
+  }*/
 }
 
 

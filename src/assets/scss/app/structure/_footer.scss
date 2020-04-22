@@ -4,18 +4,24 @@
   bottom: 0;
   width: 100%;
   text-align: center;
-  color:$blue;
   background: $white;
 
   p{
     text-align: center;
+    color:$blue;
+
+    a{
+      @include transition(0.2s, ease-in);
+      &:hover{
+        color: $or;
+      }
+    }
   }
 
-  a::before{
-    content:'';
-    background-image: none;
-  }
 }
+
+
+/**** Footer ***/
 
 footer.main-footer{
   .logo{
@@ -77,18 +83,3 @@ footer.main-footer{
   }
 
 }
-
-
-
-/*height: 40px;
-position: absolute;
-left: 0;
-background: none;
-border: 1px solid #fff;
--ms-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--webkit-transform: rotate(45deg);
--o-transform: rotate(45deg);
-display: block;
-width: 40px;
-transform: rotate(45deg) translate(-21px, -30px);*/

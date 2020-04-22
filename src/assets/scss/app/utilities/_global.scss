@@ -81,8 +81,28 @@ a.link{
     width: 0%;
     transform: translateX(-50%);
     height: 1px;
-    background: $white;
+    background: $or;
     transition: .35s;
+  }
+
+  &.txt-white{
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0%;
+      transform: translateX(-50%);
+      height: 1px;
+      background: $white;
+      transition: .35s;
+    }
+
+    &:hover:after,
+     &:focus:after,
+     &:active:after {
+       width: 100%;
+     }
   }
 }
 

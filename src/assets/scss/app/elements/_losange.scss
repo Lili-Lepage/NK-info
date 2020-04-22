@@ -9,7 +9,6 @@
 .losange-double{
   position: relative;
   @include losange(none, 80px, 4px, $white);
-  display: inline-block;
   position: absolute;
   top: -5px;
   opacity: 0.3;

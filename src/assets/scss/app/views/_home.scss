@@ -1,11 +1,9 @@
 /**** HEADER ***/
 
   section.body-content_header{
-  background-image: url('./src/assets/img/header.jpg');
-  background-repeat: no-repeat;
+  @include backgroundImg(header, jpg, no-repeat, cover);
   height: 90vh;
   background-position: top, center;
-  background-size: cover;
 
 
     .header-logo_img {
@@ -60,7 +58,7 @@
       margin-top: 30px;
     }
 
-    h2, h3, a{
+    > h2, h3, a{
       @include translate(-90px, 0);
       @include md {
        @include translate(0, 0);
@@ -68,32 +66,10 @@
     }
 
   }
-  .section-1_img {
-        .img_background{
-        position: absolute;
-        z-index: -1;
-        @include translate(-20px, -21px);
-        opacity: 0.2;
-      }
-
-      @include md {
-       text-align: left;
-      }
-    }
   }
 }
 
 
-
-/***** SECTION 2 ****/
-
-.section-2 {
-  @include backgroundImg(header, jpg, no-repeat, cover);
-
-  h2+p{
-     margin-left: 19px;
-   }
- }
 
 /***** SECTION 3 ****/
 
@@ -128,39 +104,5 @@
   }
   img{
     max-width: 100%;
-  }
-  /*.losange-blue{
-    position: absolute;
-    top: 15%;
-    left: 36%;
-    z-index: -1;
-  }
-
-  .losange-or{
-    top: 60%;
-    position: absolute;
-    left: 5%
-  }*/
-}
-
-
-
-/***** SECTION 4 ****/
-
-.section-4  {
-    @include backgroundImg(header, jpg, no-repeat, cover);
-  .section-4_decompte{
-    position: relative;
-    margin: 40px 30px;
-    h2{
-      font-size: 30px;
-      font-weight: 600;
-      margin-bottom: 0;
-      @include translate(60px, 0);
-    }
-    p{
-      margin: 0;
-      @include translate(60px, 0);
-    }
   }
 }

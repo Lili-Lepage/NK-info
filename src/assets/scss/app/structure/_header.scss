@@ -17,3 +17,26 @@ z-index: 1;
     float: right;
   }
 }
+
+
+/**** Landing page ***/
+
+.body-content_landing-header {
+  @include backgroundImg(header, jpg, no-repeat, cover);
+  height: 35vh;
+  background-position: top, center;
+
+
+    .landing-hedare_content{
+      position: relative;
+      display: inline-block;
+
+
+  h1{
+    font-size: 34px;
+    position: relative;
+    text-transform: uppercase;
+    @include font(300);
+    }
+  }
+}

@@ -143,8 +143,6 @@ p{
   padding: 120px 0;
 }
 
-/** background **/
-
 .bg-blue{
   background: $blue;
   z-index: 0;
@@ -155,13 +153,33 @@ p{
   z-index: 0;
 }
 
+
+
 .overlay{
   &::before{
     content: '';
     @include overlay($blue, 0.9);
+    z-index: -1;
   }
 }
 
 .unscroll{
   overflow: hidden;
 }
+
+.shadow{
+   box-shadow: 0px 1px 6px 0px rgb(199,199,199);
+}
+
+.double-img {
+      .img_background{
+      position: absolute;
+      z-index: -1;
+      @include translate(-20px, -21px);
+      opacity: 0.2;
+    }
+
+    @include md {
+     text-align: left;
+    }
+  }

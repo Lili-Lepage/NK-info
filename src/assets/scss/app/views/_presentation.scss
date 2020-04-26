@@ -1,0 +1,62 @@
+
+/***** SECTION 1 ****/
+
+.pres-section-1{
+  display: inline-block;
+  position: relative;
+
+.pres-section-1_img{
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    @include backgroundImg(header, jpg, no-repeat, cover);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  .pres-section-1_content{
+    padding: 80px 70px;
+    float: right;
+    width: 50%;
+  }
+
+}
+
+
+
+/***** SECTION 3 ****/
+
+
+.section-3_mission .section-mission_img{
+  position: relative;
+  .section-mission_img-content{
+    position: relative;
+    display: inline-block;
+
+      &::after{
+        content:'';
+        @include losange(none, 210px, 5px, $blue);
+        top: 47px;
+        right: -5px;
+        z-index: -1;
+        position: absolute;
+      }
+
+      &::before{
+        content:'';
+        position: absolute;
+        width: 63px;
+        height: 350px;
+        display: block;
+        background: #edc88c;
+        z-index: -1;
+        opacity: 0.5;
+        @include translate(143px, -14px);
+
+      }
+
+  }
+  img{
+    max-width: 100%;
+  }
+}

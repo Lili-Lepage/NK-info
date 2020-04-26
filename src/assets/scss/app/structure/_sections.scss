@@ -1,0 +1,29 @@
+/***** SECTION chiffre ****/
+
+.section-chiffres  {
+    @include backgroundImg(header, jpg, no-repeat, cover);
+  .section-4_decompte{
+    position: relative;
+    margin: 40px 30px;
+    h2{
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 0;
+      @include translate(60px, 0);
+    }
+    p{
+      margin: 0;
+      @include translate(60px, 0);
+    }
+  }
+}
+
+/***** SECTION Services ****/
+
+.section-services {
+  @include backgroundImg(header, jpg, no-repeat, cover);
+
+  h2+p{
+     margin-left: 19px;
+   }
+ }

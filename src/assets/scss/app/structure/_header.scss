@@ -27,7 +27,7 @@ z-index: 1;
   background-position: top, center;
 
 
-    .landing-hedare_content{
+    .landing-header_content{
       position: relative;
       display: inline-block;
 
@@ -38,5 +38,10 @@ z-index: 1;
     text-transform: uppercase;
     @include font(300);
     }
+  }
+  .losange-double{
+    top: 17px;
+    opacity: 0.3;
+    left: -27px;
   }
 }

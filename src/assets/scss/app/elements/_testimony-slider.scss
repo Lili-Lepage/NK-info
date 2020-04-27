@@ -1,39 +1,72 @@
-.testimonial-item.equal-height.style-6 {
-    margin: 10px;
-    height: auto!important;
-    text-align: center;
-    background: $white;
-    margin-top: 35px;
+#testimonial-slider{
 
-    .cell-right {
-        text-align: center;
-        padding-top: 35px;
 
-        .testimonial-name h3{
-          @include font(600);
-          margin: 0;
-          font-size: 16px;
-        }
+  .testimonial-item.equal-height.style-6 {
+      margin: 10px;
+      height: auto!important;
+      text-align: center;
+      background: $white;
+      margin-top: 35px;
 
-        .testimonial-job h4{
-          @include font(200);
-          margin: 0;
-        }
+      .cell-right {
+          text-align: center;
+          padding-top: 35px;
+
+          .testimonial-name h3{
+            @include font(600);
+            margin: 0;
+            font-size: 16px;
+          }
+
+          .testimonial-job h4{
+            @include font(200);
+            margin: 0;
+          }
+      }
+
+      .testimonial-content.quote {
+          padding: 20px 55px;
+      }
+
+      &::before{
+      content:'';
+      background-image: url(./src/assets/img/icones/quotes.svg);
+      position: absolute;
+      background-repeat: no-repeat;
+      height: 60px;
+      width: 60px;
+      left: 16px;
+      top: 13px;
+
     }
+  }
 
-    .testimonial-content.quote {
-        padding: 20px 55px;
-    }
+  .owl-prev{
+      display: inline-block;
+      position: absolute;
+      top: 38%;
+      transform: translateY(-50%);
 
-    &::before{
-    content:'';
-    background-image: url(./src/assets/img/icones/quotes.svg);
-    position: absolute;
-    background-repeat: no-repeat;
-    height: 60px;
-    width: 60px;
-    left: 16px;
-    top: 13px;
-
+      &::before{
+        content: '';
+        left: 0.25em;
+        border-width: 3px 0 0 3px;
+        border-color: #2F3C4D transparent transparent #2F3C4D;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0.75em;
+        height: 0.75em;
+        margin: auto;
+        border-style: solid;
+      }
+      &:hover{
+        &:before{
+              background: rgba(0,0,0,0.1);
+        }
+      }
   }
 }

@@ -162,10 +162,27 @@ $("#testimonial-slider").owlCarousel({
         itemsDesktop:[1000,2],
         itemsDesktopSmall:[980,1],
         itemsTablet:[768,1],
-        pagination:true,
+        pagination:false,
         navigation:true,
-        navigationText:["<",">"],
-        autoPlay:true
+        navigationText:["t","t"],
+        rewindNav : true,
+        scrollPerPage : false,
+        autoPlay:true,
+        responsive: true
     });
+
+    $("#logo-slider").owlCarousel({
+            items:5,
+            itemsDesktop:[1000,2],
+            itemsDesktopSmall:[980,1],
+            itemsTablet:[768,1],
+            pagination:false,
+            navigation:true,
+            navigationText:["t","t"],
+            rewindNav : true,
+            scrollPerPage : false,
+            autoPlay:true,
+            responsive: true
+        });
 
 });

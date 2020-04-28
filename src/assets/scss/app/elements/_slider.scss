@@ -1,0 +1,129 @@
+/**** Générique ***/
+.owl-carousel{
+  margin: 70px 0;
+  &:hover{
+    .owl-next, .owl-prev{
+      background: $or;
+      opacity: 0.4;
+    }
+  }
+
+  .owl-item{
+    text-align: center;
+  }
+
+  .owl-controls{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width:100%;
+    height: 100%;
+
+    .owl-buttons{
+      height: 100%;
+
+      .owl-prev{
+        position: absolute;
+        height: 30%;
+        top: 50%;
+        left:0;
+        transform: translateY(-50%);
+        padding: 0 18px;
+
+        @include transition(0.5s, ease-out);
+              &::before{
+              content: '';
+              left: 0.25em;
+              border-width: 2px 0 0 2px;
+              border-color: $white transparent transparent $white;
+              transform: rotate(-45deg);
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              width: 0.75em;
+              height: 0.75em;
+              margin: auto;
+              border-style: solid;
+            }
+          }
+
+
+        .owl-next{
+          position: absolute;
+          right: 0;
+          height: 30%;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 0 18px;
+          @include transition(0.5s, ease-out);
+          &::before{
+          content: '';
+          left: 0.25em;
+          border-width: 2px 0 0 2px;
+          border-color: $white transparent transparent $white;
+          transform: rotate(130deg);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 0.75em;
+          height: 0.75em;
+          margin: auto;
+          border-style: solid;
+        }
+
+      }
+
+    }
+  }
+}
+
+
+/******** TEstimonial slider ****/
+
+#testimonial-slider{
+    margin: 0 0;
+  .testimonial-item.equal-height.style-6 {
+      margin: 10px;
+      height: auto!important;
+      text-align: center;
+      background: $white;
+      margin-top: 35px;
+
+      .cell-right {
+          text-align: center;
+          padding-top: 35px;
+
+          .testimonial-name h3{
+            @include font(600);
+            margin: 0;
+            font-size: 16px;
+          }
+
+          .testimonial-job h4{
+            @include font(200);
+            margin: 0;
+          }
+      }
+
+      .testimonial-content.quote {
+          padding: 20px 55px;
+      }
+
+      &::before{
+      content:'';
+      background-image: url(./src/assets/img/icones/quotes.svg);
+      position: absolute;
+      background-repeat: no-repeat;
+      height: 60px;
+      width: 60px;
+      left: 16px;
+      top: 13px;
+
+    }
+  }
+
+}

@@ -109,6 +109,44 @@
         }
       }
     }
+
+    .sub-menu{
+      position: absolute;
+      background: $white;
+      padding: 10px 32px;
+      opacity: 0;
+      @include transition(0.5s, ease);
+      transform-origin: 2% 3%;
+      transform: scale(0);
+      margin-top: 2px;
+
+      li{
+        display: block;
+        line-height: 2;
+        margin: 10px 0;
+      }
+
+      &::before{
+        content: "";
+        background: $or;
+        position: absolute;
+        width: 0;
+        height: 1px;
+        left: 0;
+        top: 0;
+        @include transition(0.5s, ease);
+      }
+    }
+
+    &.link-service:hover{
+      .sub-menu{
+        transform: scale(1);
+        opacity: 1;
+        &::before{
+          width: 100%;
+        }
+      }
+    }
   }
 
   &.open-nav{

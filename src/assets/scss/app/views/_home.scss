@@ -87,6 +87,10 @@
         right: -5px;
         z-index: -1;
         position: absolute;
+
+        @include sm{
+          content: none;
+        }
       }
 
       &::before{

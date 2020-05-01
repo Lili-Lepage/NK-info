@@ -1,0 +1,191 @@
+#services{
+
+
+
+  .section-website_img{
+    position: relative;
+    .section-website_img-content{
+      position: relative;
+      display: inline-block;
+
+        @include md {
+          margin-top: 50px;
+        }
+
+        &::after{
+          content:'';
+          @include semi-losange-r(150px, $blue);
+          top: 15px;
+          right: -19px;
+          z-index: -1;
+          position: absolute;
+
+          @include sm{
+            content: none;
+          }
+        }
+
+        &::before{
+          content:'';
+          @include losange(none, 130px, 5px, $or);
+          top: 195px;
+          position: absolute;
+          left: 26px;
+        }
+        @include sm{
+          display:none;
+        }
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+
+
+
+  .section-crm_img{
+    position: relative;
+    .section-crm_img-content{
+      position: relative;
+      display: inline-block;
+
+        &::after{
+          content:'';
+          @include losange($blue, 130px, 5px, transparent);
+          top: 147px;
+          position: absolute;
+          right: 38px;
+
+          @include sm{
+            content: none;
+          }
+        }
+
+        &::before{
+          content:'';
+          @include semi-losange-l(100px, $or);
+          top: 64px;
+          left: -20px;
+          z-index: -1;
+          opacity: 0.5;
+          position: absolute;
+
+          @include lg{
+            top: 132px;
+          }
+        }
+        @include sm{
+          display:none;
+        }
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+
+
+
+
+
+  .section-erp_img{
+    position: relative;
+    .section-erp_img-content{
+      position: relative;
+      display: inline-block;
+
+        @include md {
+          margin-top: 50px;
+        }
+
+        &::after{
+          content:'';
+          @include backgroundImg(image-1, png, no-repeat, cover);
+          width: 311px;
+          height: 323px;
+          top: -12px;
+          right: -41px;
+          position: absolute;
+          z-index: -1;
+          opacity: 0.3;
+
+          @include sm{
+            content: none;
+          }
+        }
+
+        &::before{
+          content:'';
+          @include semi-losange-l(130px, $or);
+          top: 34px;
+          left: -20px;
+          z-index: -1;
+          position: absolute;
+
+          @include lg{
+            top: 132px;
+          }
+        }
+        @include sm{
+          display:none;
+        }
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+
+
+
+  .section-crea_img{
+    position: relative;
+    .section-crea_img-content{
+      position: relative;
+      display: inline-block;
+
+        @include md {
+          margin-top: 50px;
+        }
+
+        &::after{
+          content:'';
+          @include losange(none, 180px, 4px, $blue);
+          top: 90px;
+          position: absolute;
+          right: -3px;
+          z-index: -1;
+
+          @include sm{
+            content: none;
+          }
+        }
+
+        &::before{
+          content:'';
+          @include losange($or, 130px, 5px, transparent);
+          top: 42px;
+          left: 14px;
+          opacity: 0.3;
+          position: absolute;
+
+          @include lg{
+            top: 132px;
+          }
+        }
+        @include sm{
+          display:none;
+        }
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+
+
+  .two-button > a{
+    @include sm{
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+}

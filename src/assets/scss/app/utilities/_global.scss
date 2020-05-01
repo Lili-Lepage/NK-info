@@ -141,6 +141,14 @@ p{
 }
 .spad {
   padding: 120px 0;
+
+  @include sm{
+    padding: 40px 0;
+  }
+
+  @include md{
+    padding: 80px 0;
+  }
 }
 
 .bg-blue{

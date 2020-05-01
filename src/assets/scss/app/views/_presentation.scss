@@ -13,11 +13,18 @@
     position: absolute;
     top: 0;
     bottom: 0;
+    @include lg{
+      display: none;
+    }
   }
   .pres-section-1_content{
     padding: 80px 70px;
     float: right;
     width: 50%;
+    @include lg{
+      width: 100%;
+      float: none;
+    }
   }
 
 }
@@ -33,6 +40,10 @@
     position: relative;
     display: inline-block;
 
+      @include md {
+        margin-top: 50px;
+      }
+
       &::after{
         content:'';
         @include losange(none, 210px, 5px, $blue);
@@ -40,6 +51,9 @@
         right: -5px;
         z-index: -1;
         position: absolute;
+        @include sm{
+          content: none;
+        }
       }
 
       &::before{
@@ -52,7 +66,6 @@
         z-index: -1;
         opacity: 0.5;
         @include translate(143px, -14px);
-
       }
 
   }

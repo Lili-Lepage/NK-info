@@ -10,10 +10,17 @@
       font-weight: 600;
       margin-bottom: 0;
       @include translate(60px, 0);
+      @include sm{
+        @include translate(40px, 0);
+      }
     }
     p{
       margin: 0;
       @include translate(60px, 0);
+
+      @include sm{
+        @include translate(40px, 0);
+      }
     }
   }
 }
@@ -25,5 +32,5 @@
 
   h2+p{
      margin-left: 19px;
+    }
    }
- }

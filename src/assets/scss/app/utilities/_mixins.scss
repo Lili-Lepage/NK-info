@@ -1,8 +1,11 @@
+/*** font ***/
+
 @mixin font($weight){
   font-family: 'open-san';
   font-weight: $weight;
 }
 
+/*** losange ***/
 
 @mixin losange($color, $width,$border,$borderColor, $test:translate(0,0)){
     height: $width;
@@ -17,12 +20,35 @@
     display: inline-block;
 }
 
+
+/**** semi losange ***/
+
+@mixin semi-losange-r ($width,$color) {
+  width: 0;
+  height: 0;
+  border-top: $width solid transparent;
+  border-bottom: $width solid transparent;
+  border-left: $width solid $color;
+}
+
+@mixin semi-losange-l ($width,$color) {
+  width: 0;
+  height: 0;
+  border-top: $width solid transparent;
+  border-bottom: $width solid transparent;
+  border-right: $width solid $color;
+}
+
+/***** background image ***/
+
 @mixin backgroundImg($name,$ext, $repeat, $size){
   $url:"./src/assets/img/#{$name}.#{$ext}";
   background-image:url($url);
   background-repeat: $repeat;
   background-size:$size;
 }
+
+/*** Overlay ***/
 
 @mixin overlay($color,$opacity){
   background: $color;
@@ -34,6 +60,7 @@
   opacity:$opacity;
 }
 
+/**** translate ***/
 
 @mixin translate($x, $y){
 
@@ -43,6 +70,8 @@
   -o-transform: translate($x, $y); /* Opera */
   transform: translate($x, $y); /* Opera */
 }
+
+/**** Transition hover ***/
 
 @mixin transition($time, $type){
   transition:$time $type;

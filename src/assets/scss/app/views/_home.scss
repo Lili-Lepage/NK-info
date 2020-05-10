@@ -82,7 +82,7 @@
 
       &::after{
         content:'';
-        @include losange(none, 210px, 5px, $blue);
+        @include losange(none, 210px, 5px, $blue, 5px);
         top: 47px;
         right: -5px;
         z-index: -1;
@@ -95,7 +95,7 @@
 
       &::before{
         content:'';
-        @include losange(none, 130px, 5px, $or);
+        @include losange(none, 130px, 5px, $or, 5px);
         top: 195px;
         position: absolute;
         left: 26px;

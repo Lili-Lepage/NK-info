@@ -1,14 +1,14 @@
 .losange-or{
-    @include losange(none, 130px, 4px, $or);
+    @include losange(none, 130px, 4px, $or, 5px);
 }
 
 .losange-blue{
-    @include losange(none, 200px, 5px, $blue);
+    @include losange(none, 200px, 5px, $blue, 5px);
 }
 
 .losange-double{
   position: relative;
-  @include losange(none, 80px, 4px, $white);
+  @include losange(none, 80px, 4px, $white, 5px);
   position: absolute;
   top: -5px;
   opacity: 0.3;

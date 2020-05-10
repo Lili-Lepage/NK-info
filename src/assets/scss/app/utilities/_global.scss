@@ -8,7 +8,7 @@ $grey:#4f5051;
 
 body{
   margin:0 auto;
-  @include font(300);
+  @include font('open-san',300);
   font-size: 14px;
 }
 
@@ -23,7 +23,7 @@ ul {
 
 a.more{
   font-size: 14px;
-  @include font(300);
+  @include font('open-san',300);
   text-decoration: none;
   color:$blue;
   position: relative;
@@ -61,7 +61,7 @@ a.more{
 
 a.link{
   font-size: 14px;
-  @include font(300);
+  @include font('open-san',300);
   text-decoration: none;
   color:$blue;
   position: relative;

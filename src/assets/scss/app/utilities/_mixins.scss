@@ -1,17 +1,18 @@
 /*** font ***/
 
-@mixin font($weight){
-  font-family: 'open-san';
+@mixin font($name,$weight){
+  font-family: $name;
   font-weight: $weight;
 }
 
 /*** losange ***/
 
-@mixin losange($color, $width,$border,$borderColor, $test:translate(0,0)){
+@mixin losange($color, $width,$border,$borderColor,$radius, $test:translate(0,0)){
     height: $width;
     width: $width;
     background: $color;
     border: $border solid $borderColor;
+    border-radius: $radius;
     -ms-transform: rotate(45deg) $test; /* Internet Explorer */
     -moz-transform: rotate(45deg) $test; /* Firefox */
     -webkit-transform: rotate(45deg) $test; /* Safari et Chrome */
@@ -23,17 +24,19 @@
 
 /**** semi losange ***/
 
-@mixin semi-losange-r ($width,$color) {
+@mixin semi-losange-r ($width,$radius,$color) {
   width: 0;
   height: 0;
+  border-radius: $radius;
   border-top: $width solid transparent;
   border-bottom: $width solid transparent;
   border-left: $width solid $color;
 }
 
-@mixin semi-losange-l ($width,$color) {
+@mixin semi-losange-l ($width,$radius,$color) {
   width: 0;
   height: 0;
+  border-radius: $radius;
   border-top: $width solid transparent;
   border-bottom: $width solid transparent;
   border-right: $width solid $color;

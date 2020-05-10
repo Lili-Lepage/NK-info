@@ -14,7 +14,7 @@
 
         &::after{
           content:'';
-          @include semi-losange-r(150px, $blue);
+          @include semi-losange-r(150px,0px, $blue);
           top: 15px;
           right: -19px;
           z-index: -1;
@@ -27,7 +27,7 @@
 
         &::before{
           content:'';
-          @include losange(none, 130px, 5px, $or);
+          @include losange(none, 130px, 5px, $or, 5px);
           top: 195px;
           position: absolute;
           left: 26px;
@@ -51,7 +51,7 @@
 
         &::after{
           content:'';
-          @include losange($blue, 130px, 5px, transparent);
+          @include losange($blue, 130px, 5px, transparent, 0px);
           top: 147px;
           position: absolute;
           right: 38px;
@@ -63,7 +63,7 @@
 
         &::before{
           content:'';
-          @include semi-losange-l(100px, $or);
+          @include semi-losange-l(100px,0px, $or);
           top: 64px;
           left: -20px;
           z-index: -1;
@@ -115,7 +115,7 @@
 
         &::before{
           content:'';
-          @include semi-losange-l(130px, $or);
+          @include semi-losange-l(130px, 0px,$or);
           top: 34px;
           left: -20px;
           z-index: -1;
@@ -148,7 +148,7 @@
 
         &::after{
           content:'';
-          @include losange(none, 180px, 4px, $blue);
+          @include losange(none, 180px, 4px, $blue,5px);
           top: 90px;
           position: absolute;
           right: -3px;
@@ -161,7 +161,7 @@
 
         &::before{
           content:'';
-          @include losange($or, 130px, 5px, transparent);
+          @include losange($or, 130px, 5px, transparent,5px);
           top: 42px;
           left: 14px;
           opacity: 0.3;

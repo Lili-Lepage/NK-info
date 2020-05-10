@@ -1,5 +1,6 @@
 .btn-primary {
     border: 1px solid $or;
+    border-radius: 3px;
     color:$white;
     @include transition(0.5s, ease-in);
     padding: 15px 30px;
@@ -8,6 +9,7 @@
     display: inline-block;
     margin: 20px 0;
     z-index: 0;
+    text-transform: uppercase;
 
     &:hover:after,
      &:focus:after,
@@ -60,6 +62,7 @@
 
 .btn-second {
     border: 1px solid $or;
+    border-radius: 3px;
     background-color: transparent;
     color:$or;
     @include transition(0.5s, ease-in);
@@ -69,6 +72,7 @@
     display: inline-block;
     margin: 20px 0;
     z-index: 0;
+    text-transform: uppercase;
 
     &:hover:after,
      &:focus:after,

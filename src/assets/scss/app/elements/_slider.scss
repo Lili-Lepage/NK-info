@@ -98,13 +98,13 @@
           padding-top: 35px;
 
           .testimonial-name h3{
-            @include font(600);
+            @include font('open-san',600);
             margin: 0;
             font-size: 16px;
           }
 
           .testimonial-job h4{
-            @include font(200);
+            @include font('open-san',200);
             margin: 0;
           }
       }

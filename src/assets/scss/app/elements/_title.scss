@@ -4,7 +4,7 @@ h2.title{
   position: relative;
   border-left: 2px solid #2F3C4D;
   padding: 5px 0 5px 14px;
-  @include font(300);
+  @include font('Montserrat',400);
   font-size: 24px;
   margin: 10px 0;
 
@@ -14,8 +14,9 @@ h2.title{
 }
 
 h3.sub-title{
-  @include font(300);
+  @include font('open-san',300);
   font-size: 18px;
-  padding: 10px 0 10px 14px;
+  padding: 0 0 10px 14px;
   margin: 0;
+  color:$grey;
 }

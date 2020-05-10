@@ -46,7 +46,7 @@
 
       &::after{
         content:'';
-        @include losange(none, 210px, 5px, $blue);
+        @include losange(none, 210px, 5px, $blue,5px);
         top: 47px;
         right: -5px;
         z-index: -1;

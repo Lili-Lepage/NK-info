@@ -1,7 +1,8 @@
 
 .srv-bloc{
-  width: 80%;
+  width: 90%;
   border: 1px solid $white;
+  border-radius: 5px;
   padding: 13px 20px 16px 20px;
   text-align: justify;
   margin: 30px auto;
@@ -49,6 +50,7 @@
       p, a{
       opacity: 1;
     }
+    box-shadow:0 0px 3px 0px $white;
   }
 }
 

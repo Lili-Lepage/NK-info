@@ -1,0 +1,31 @@
+
+/***** SECTION 1 ****/
+
+.contact-section-1{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+.contact-section-1_img{
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    @include backgroundImg(header, jpg, no-repeat, cover);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    @include lg{
+      display: none;
+    }
+  }
+  .contact-section-1_content{
+    padding: 80px 70px;
+    float: right;
+    width: 50%;
+    @include lg{
+      width: 100%;
+      float: none;
+    }
+  }
+
+}

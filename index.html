@@ -13,33 +13,30 @@
       <header>
         <div class="container-fluid header">
           <div class="header-logo">
-            <a href="#" title="retour à l'accueil"><img src="src/assets/img/logo-NK-informatique-head.svg" alt="NK-Informatique"></a>
+              <a href="./index.html" title="retour à l'accueil"><img src="src/assets/img/logo-NK-informatique-head.svg" alt="NK-Informatique"></a>
           </div>
           <div class="header-nav">
-            <div class="button_container" id="toggle">
+            <button class="button_container" id="toggle">
               <span class="top"></span>
               <span class="middle"></span>
               <span class="bottom"></span>
-            </div>
+            </button>
             <nav class="main-nav">
               <ul>
                 <li>
-                  <a class="link" href="./index.html">Accueil</a>
+                  <a class="link current" href="./index.html">Accueil</a>
                 </li>
                 <li>
-                  <a class="link current" href="./presentation.html">Qui sommes-nous ?</a>
+                  <a class="link" href="./presentation.html">Qui sommes-nous ?</a>
                 </li>
                 <li class="link-service">
-                  <a class="link" href="./services.html">Nos services</a>
+                  <a class="link" href="#">Nos services</a>
                   <ul class="shadow sub-menu">
-                    <li><a class="link" href="#">Développement web</a></li>
-                    <li><a class="link" href="#">Print</a></li>
-                    <li><a class="link" href="#">Formations</a></li>
-                    <li><a class="link" href="#">Audits</a></li>
+                    <li><a class="link" href="./formations.html">Formations</a></li>
+                    <li><a class="link" href="./developpement.html">Développement</a></li>
+                    <li><a class="link" href="./print.html">Graphisme</a></li>
+                    <li><a class="link" href="./audits.html">Audits</a></li>
                   </ul>
-                </li>
-                <li>
-                  <a class="link" href="./references.html">Nos références</a>
                 </li>
                 <li>
                   <a class="link" href="./contact.html">Contact</a>
@@ -56,7 +53,7 @@
           <section class="body-content_header">
             <img class="header-logo_img" src="src/assets/img/logo-NK-informatique-bc.svg" alt="NK INFORMATIQUE">
             <a class="scroll-link" href="#content">
-            		<svg  id="scroll" width="40px" class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
+            		<svg  id="scroll" width="30px" class="mouse" viewBox="0 0 55 130" preserveAspectRatio="xMidYMid meet">
             		<g fill="none" fill-rule="evenodd">
             			<rect width="50" height="80" x="1.5" y="1.5" stroke="#fff" stroke-width="3" rx="36"/>
             			<circle class="scroll" cx="26" cy="31.5" r="4.5" fill="#fff"/>
@@ -67,7 +64,7 @@
 
           </section>
 
-          <section id="section-1" class="bg-grey section-1 spad">
+          <section id="section-1" class="bg-grey section-1 section-pres spad">
             <div class="container">
               <div class="row">
                 <div class="txt-right double-img col-lg-4 col-md-5 col-sm-12">
@@ -78,9 +75,11 @@
                   <h2 class="title">Qui sommes-nous ?</h2>
                   <h3 class="sub-title">Experts et spécialistes en formation, développement et graphisme.</h3>
 
-                  <p class="summary txt-txt-justify">Depuis près de 10 ans, NK Informatique vous accompagne dans vos projets informatiques à plusieurs niveaux. Pour le compte de divers clients sur tout l'hexagone, nous concevons et réalisons de nombreux sites ou applications web (CRM, ERP, Intranet, Extranet...).
-                    <br/>Nous prenons également en charge la réalisation de tous vos besoins en graphisme : print, web, logo ou encore identité visuelle complète.<br/>
-                     Fort de notre expérience et d'une expertise reconnue, nous sommes également ammenés à la partager aux talents de demain en lien avec divers centres de formations en présentiel ou en ligne, ou encore à réaliser des audits dans diverses entreprises.</p>
+                  <p class="summary txt-txt-justify">
+                    Depuis près de 10 ans, NK Informatique vous accompagne dans vos projets informatiques à plusieurs niveaux. Pour le compte de divers clients sur tout l'hexagone, nous concevons et réalisons de nombreux sites ou applications web (CRM, ERP, Intranet, Extranet...).
+                    Nous prenons également en charge la réalisation de tous vos besoins en graphisme : print, web, logo ou encore identité visuelle complète.
+                    Fort de notre expérience et d'une expertise reconnue, nous sommes également ammenés à la partager aux talents de demain en lien avec divers centres de formations en présentiel ou en ligne, ou encore à réaliser des audits dans diverses entreprises.
+                  </p>
 
                     <a class="btn-primary" href="#">En savoir plus</a>
                 </div>
@@ -121,6 +120,7 @@
                             <h3 class="txt-white">Graphisme</h3>
                             <p class="txt-white">Réalisation complète ou partielle de votre identité visuelle : charte graphique, logo, supports print...
                             </p>
+                            <br/>
                             <a class="txt-white more" href="#">En savoir plus</a>
                           </div>
                         </div>
@@ -140,14 +140,15 @@
 
 
 
-          <section class="section-3 spad bg-grey ">
+          <section class="section-3 section-cta spad bg-grey ">
             <div class="container">
               <div class="row">
                 <div class="col-lg-5 col-md-12 col-sm-12">
                   <h2 class="title">Vous avez un projet ?</h2>
 
-                  <p class="summary txt-justify"><h3 class="sub-title">Vous êtes actuellement en recherche d'expertise ou de compétences informatiques en lien avec nos services ?</h3>
-                    <h3 class="sub-title">N'hésitez pas à nous contacter par mail en nous explicitant votre demande.Nous mettrons tout en oeuvre pour répondre parfaitement à vos attentes !</h3></p>
+                <h3 class="summary txt-justify sub-title">Vous êtes actuellement en recherche d'expertise ou de compétences informatiques en lien avec nos services ?<h3/>
+
+<h3 class="summary txt-justify sub-title">N'hésitez pas à nous contacter par mail en nous expliquant votre demande. Nous mettrons tout en oeuvre pour répondre parfaitement à vos attentes !</h3>
 
                   <a class="btn-primary" href="#">Contactez-nous</a>
                 </div>
@@ -207,7 +208,7 @@
 
 
 
-          <section class="section-5 spad bg-grey">
+          <section class="section-5 section-partner spad bg-grey">
             <div class="container">
               <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
@@ -216,37 +217,18 @@
               </div>
               <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                  <div id="logo-slider" class="owl-carousel">
-                    <div class="slider-item">
-                        <img src="http://www.synusie.de/images/codepen/hypo-wuestenrot.png">
-                    </div>
-                    <div class="slider-item">
-                        <img src="http://www.synusie.de/images/codepen/hypo-wuestenrot.png">
-                    </div>
-                    <div class="slider-item">
-                        <img src="http://www.synusie.de/images/codepen/hypo-wuestenrot.png">
-                    </div>
-                    <div class="slider-item">
-                        <img src="http://www.synusie.de/images/codepen/hypo-wuestenrot.png">
-                    </div>
-                    <div class="slider-item">
-                        <img src="http://www.synusie.de/images/codepen/hypo-wuestenrot.png">
-                    </div>
-                    <div class="slider-item">
-                        <img src="http://www.synusie.de/images/codepen/hypo-wuestenrot.png">
-                    </div>
-                    <div class="slider-item">
-                        <img src="http://www.synusie.de/images/codepen/hypo-wuestenrot.png">
-                    </div>
 
+                  <div class="slider-logos slider">
+                    <div class="slide"><a target="_blank" href="http://www.andenu.fr/fr/" alt="Anjou Développement nutrition"><img src="src/assets/img/logos/adn.png"></a></div>
+                    <div class="slide"><a target="_blank" href="http://www.openclassrooms.fr/" alt="openclassrooms"><img src="src/assets/img/logos/openclassrooms.png"></a></div>
+                    <div class="slide"><a target="_blank" href="http://www.studeffi.com/" alt="Studeffi"><img src="src/assets/img/logos/studeffi.png"></a></div>
+                    <div class="slide"><a target="_blank" href="http://www.yoomonkeez.com/" alt="yoomonkeez"><img src="src/assets/img/logos/yoomonkeez.png"></a></div>
+                    <div class="slide"><a target="_blank" href="http://www.cnam.fr/" alt="Cnam"><img src="src/assets/img/logos/cnam.png"></a></div>
+                    <div class="slide"><a target="_blank" href="http://campus.academy/" alt="Campus-Academy"><img src="src/assets/img/logos/campus-academy.png"></a></div>
+                    <div class="slide"><a target="_blank" href="http://www.ynov.com/" alt="INOV"><img src="src/assets/img/logos/INOV.png"></a></div>
                   </div>
                 </div>
 
-                </div>
-                <div class="row">
-                  <div class="txt-center col-lg-12">
-                    <a class="btn-second" href="#">Découvrir leurs témoiganges</a>
-                  </div>
                 </div>
               </div>
           </section>
@@ -273,12 +255,14 @@
                 <div class="footer_sitemap col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <h3 class="txt-white">Plan du site</h3>
                     <ul>
-                      <li><a class="link txt-white" href="#">Accueil</a></li>
-                      <li><a class="link txt-white" href="#">Qui sommes-nous ?</a></li>
-                      <li><a class="link txt-white" href="#">Nos services</a></li>
-                      <li><a class="link txt-white" href="#">Nos références</a></li>
-                      <li><a class="link txt-white" href="#">Contact</a></li>
-                      <li><a class="link txt-white" href="#">politique de confidentialité</a></li>
+                      <li><a class="link txt-white" href="./index.html">Accueil</a></li>
+                      <li><a class="link txt-white" href="./presentation.html">Qui sommes-nous ?</a></li>
+                      <li><a class="link txt-white" href=".formations.html">Formations</a></li>
+                      <li><a class="link txt-white" href="./developpement.html">Développement</a></li>
+                      <li><a class="link txt-white" href="./print.html">Print</a></li>
+                      <li><a class="link txt-white" href="./audits.html">Audits</a></li>
+                      <li><a class="link txt-white" href="./contact.html">Contact</a></li>
+                      <li><a class="link txt-white" href="./politique-de-confidentialite.html">politique de confidentialité</a></li>
                     </ul>
                 </div>
                 <div class="footer_sn col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -302,7 +286,7 @@
       </footer>
     </div>
       <script type="text/javascript" src="src/assets/js/jquery.min.js"></script>
-      <script type="text/javascript" src="src/assets/js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="src/assets/js/slick.min.js"></script>
       <script type="text/javascript" src="src/assets/js/main.js"></script>
     </body>
 

@@ -29,8 +29,9 @@
 
     .scroll-link{
       position: absolute;
-      bottom: 45px;
-      left: 49%;
+      bottom: 0;
+      left: 50%;
+      @include translate(-50%, -20%);
       cursor: pointer;
 
         .scroll {

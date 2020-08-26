@@ -10,6 +10,10 @@ body{
   margin:0 auto;
   @include font('open-san',300);
   font-size: 14px;
+
+  *:focus{
+    outline:1px solid $or;
+  }
 }
 
 
@@ -104,6 +108,7 @@ a.link{
        width: 100%;
      }
   }
+
 }
 
 

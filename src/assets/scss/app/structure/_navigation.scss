@@ -2,18 +2,29 @@
   position: relative;
   .button_container {
     position: absolute;
-    right: 2%;
+    right:0;
     height: 27px;
     width: 35px;
     cursor: pointer;
     z-index: 100;
     transition: opacity .25s ease;
+    background: none;
+    border:none;
+    opacity:0.5;
+
 
     &:hover {
-      opacity: .7;
+      opacity: 1;
+    }
+
+    &:focus{
+      opacity: 1;
+      outline:none;
     }
 
     &.active {
+      border:none;
+
       .top {
         transform: translateY(11px) translateX(0) rotate(45deg);
       }
@@ -25,6 +36,8 @@
         transform: translateY(-11px) translateX(0) rotate(-45deg);
       }
     }
+
+
 
     span {
     background: $grey;
@@ -48,15 +61,146 @@
   }
 
 
+  .main-nav{
+    float: right;
+    margin: 2px 90px;
+    transform-origin: 100% 50%;
+    @include xl{
+      @include transition(0.3s, ease);
+      transform: scale(0);
+    }
 
-.main-nav{
-  display: inline-block;
+    @include lg{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      background: #fff;
+      margin: 0;
+      float: none;
+      text-align: center;
+      @include transition(0.35s, ease-out) ;
+      transform-origin: 100% 0%;
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    ul:not(.sub-menu){
+      @include lg{
+        position: relative;
+        top: 50%;
+        transform:translateY(-50%);
+
+      }
+
+        li{
+          display: inline-block;
+          margin: 0 18px;
+          @include lg{
+            margin: 30px;
+            display: block;
+          }
+        }
+
+      }
+
+
+
+    a
+
+    {
+      @include lg{
+        font-weight: 100;
+        font-size: 20px;
+      }
+
+      &.current{
+
+          color: $or;
+          &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100%;
+            height: 1px;
+            background: $or;
+            opacity: 1;
+            @include transition(0.35s, ease-out);
+
+          }
+        }
+    }
+
+      .link-service{
+
+        > a{
+          @include xl{
+              cursor: default;
+          }
+        }
+        &:hover, &:focus-within{
+          @include xl{
+            .sub-menu{
+              opacity: 1;
+              transform: scale(1) translate(0, 5px);
+            }
+          }
+        }
+      }
+
+
+    .sub-menu{
+      z-index: 1;
+      background: $white;
+      padding: 10px 32px;
+
+      @include lg{
+        margin-top: 20px;
+        box-shadow: none;
+        background: $light-grey;
+
+      }
+
+     li{
+       padding: 10px 0;
+     }
+
+      @include xl{
+        position: absolute;
+        opacity: 0;
+        @include transition(0.5s, ease);
+        transform-origin: 2% 3%;
+        transform: scale(0) translate(0, 15px);
+      }
+
+      @include lg{
+        position: relative;
+        li{
+          display: block;
+        }
+      }
+    }
+
+      &.open-nav{
+          transform: scale(1);
+          @include lg{
+            opacity: 1;
+      }
+    }
+
+
+  }
+
+}
+
+
+/*.main-nav{
   float: right;
   margin: 2px 90px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  @include transition(0.3s, ease);
   transform-origin: 100% 50%;
   transform: scale(0);
 
@@ -71,28 +215,6 @@
       padding-bottom: 5px;
       @include transition(0.5s, ease-out);
 
-      &:hover:after,
-       &:focus:after,
-       &:active:after {
-         width: 100%;
-       }
-
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: 0%;
-        transform: translateX(-50%);
-        height: 1px;
-        background: $or;
-        opacity: 0.7;
-        @include transition(0.35s, ease-out);
-      }
-
-      &:hover{
-        color:$or;
-      }
 
       &.current{
         color: $or;
@@ -111,14 +233,14 @@
     }
 
     .sub-menu{
+      z-index: 1;
       position: absolute;
       background: $white;
       padding: 10px 32px;
       opacity: 0;
       @include transition(0.5s, ease);
       transform-origin: 2% 3%;
-      transform: scale(0);
-      margin-top: 2px;
+      transform: scale(0) translate(0, 15px);
 
       li{
         display: block;
@@ -138,12 +260,18 @@
       }
     }
 
-    &.link-service:hover{
-      .sub-menu{
-        transform: scale(1);
-        opacity: 1;
-        &::before{
-          width: 100%;
+    @include xl{
+      &.link-service:hover{
+        a{cursor: default;}
+        > .sub-menu{
+          transform: scale(1);
+          opacity: 1;
+
+          &::before{
+            width: 100%;
+          }
+          &
+          a{cursor: pointer;}
         }
       }
     }
@@ -151,8 +279,7 @@
 
   &.open-nav{
       transform: scale(1);
-  }
-
+}
 
 
   @include lg{
@@ -168,6 +295,8 @@
       text-align: center;
       z-index:1;
       margin: 0;
+      @include transition(0.35s, ease-out) ;
+      transform-origin: 100% 0%;
       transform: scale(0);
       opacity: 0;
 
@@ -181,25 +310,28 @@
 
         li {
             display: block;
-            height: calc(100% / 6);
-            min-height: 50px;
             position: relative;
+            margin: 30px;
 
             a{
               font-size: 20px;
             }
 
+            .sub-menu{
+              display: block;
+              box-shadow: none;
+              background:#fbfbfb;
+              margin: 0;
+
+            }
+
           }
         }
-
-
 
       &.open-nav{
           transform: scale(1);
           opacity: 1;
       }
-
-
 
     }
   }
@@ -208,4 +340,4 @@
     margin: 0 10px;
   }
 
-}
+}*/

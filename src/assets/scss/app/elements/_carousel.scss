@@ -1,0 +1,255 @@
+.slick-slide {
+    margin: 0px 20px;
+
+    img {
+        width: 100%;
+    }
+
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover{
+      .slick-next, .slick-prev{
+        background: $or;
+        opacity: 0.4;
+      }
+    }
+
+    .slick-list
+    {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+
+        &:focus
+        {
+            outline: none;
+        }
+
+        &.dragging
+        {
+            cursor: pointer;
+            cursor: hand;
+        }
+    }
+
+
+    .slick-track,
+    {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: block;
+        -webkit-transform: translate3d(0, 0, 0);
+           -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+             -o-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+
+                &::before{
+                  display: table;
+                  content: '';
+                }
+                &::after{
+                  display: table;
+                  content: '';
+                  clear: both;
+                }
+    }
+
+    .slick-loading {
+      .slick-track
+      {
+          visibility: hidden;
+      }
+    }
+
+
+    .slick-slide
+    {
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: 1px;
+
+        img {
+          display: block;
+        }
+
+        &.slick-loading img
+        {
+            display: none;
+        }
+
+        &.dragging img
+        {
+            pointer-events: none;
+        }
+    }
+
+}
+
+
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-next{
+  cursor:pointer;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  height: 30%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 18px;
+  @include transition(0.5s, ease-out);
+  &::before{
+  content: '';
+  left: 0.25em;
+  border-width: 2px 0 0 2px;
+  border-color: $white transparent transparent $white;
+  transform: rotate(130deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0.75em;
+  height: 0.75em;
+  margin: auto;
+  border-style: solid;
+}
+
+}
+
+
+.slick-prev{
+  cursor:pointer;
+  z-index: 1;
+  position: absolute;
+  height: 30%;
+  top: 50%;
+  left:0;
+  transform: translateY(-50%);
+  padding: 0 18px;
+
+  @include transition(0.5s, ease-out);
+        &::before{
+        content: '';
+        left: 0.25em;
+        border-width: 2px 0 0 2px;
+        border-color: $white transparent transparent $white;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0.75em;
+        height: 0.75em;
+        margin: auto;
+        border-style: solid;
+      }
+}
+
+
+/*** LOogos slider ****/
+
+    .slider-logos { margin:35px 0; }
+
+
+/****** tESTYMONY SLIDER ******/
+
+  .slider-testimonial {
+    margin-bottom: 4rem !important;
+    margin-top: 4rem;
+
+
+
+    .testimonial-item{
+        margin: 10px;
+        height: auto!important;
+        text-align: center;
+        background: $white;
+        margin: 35px 10px;
+        position: relative;
+
+        &::before{
+        content:'';
+        background-image: url(./src/assets/img/icones/quotes.svg);
+        position: absolute;
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 60px;
+        left: 0;
+        top: 0;
+        transform: translate(6px, -22px);
+
+        }
+
+      }
+
+        .testimonial-info{
+          text-align: center;
+          padding-top: 35px;
+        }
+
+        .testimonial-name h3{
+          @include font('open-san',600);
+          margin: 0;
+          font-size: 16px;
+        }
+
+        .testimonial-job h4{
+          @include font('open-san',200);
+          margin: 0;
+        }
+
+
+        .testimonial-content {
+            padding: 20px 55px;
+        }
+
+    }

@@ -4,18 +4,25 @@ $(document).ready(function() {
 
 var sm = 576,
     md = 768,
-    lg = 992,
-    xl = 1200;
+    lg = 990,
+    xl = 992;
+
 
 /**** navigation  ***/
 
 $('#toggle').click(function() {
    $(this).toggleClass('active');
     $('.main-nav').toggleClass('open-nav');
-      if (window.matchMedia("(max-width:"+lg+"px)").matches) {
-        $('html').toggleClass('unscroll');
-      }
   });
+
+  if (window.matchMedia("(max-width:"+lg+"px)").matches) {
+    $('.sub-menu').slideUp();
+    $('html').toggleClass('unscroll');
+    $('.link-service').click(function(e){
+      e.preventDefault();
+      $('.sub-menu').slideToggle();
+    });
+  }
 
     $(window).resize(function(){
       if($('.main-nav').hasClass('open-nav')){
@@ -24,11 +31,10 @@ $('#toggle').click(function() {
         }else {
           $('html').removeClass('unscroll');
         }
-
       }
+
+
   });
-
-
 
 
     /*** Scroll vers la section 1 ***/
@@ -43,7 +49,7 @@ $('#toggle').click(function() {
 
 
 
-    /*** Compteur **/
+    /*** Compteur ***/
 
     $('.incremental').each(function() {
         var object        = $(this),
@@ -73,57 +79,57 @@ $('#toggle').click(function() {
 
 /**** Slider *****/
 
-$("#testimonial-slider").owlCarousel({
-        items:3,
-        itemsDesktop:[1000,2],
-        itemsDesktopSmall:[980,1],
-        itemsTablet:[768,1],
-        pagination:false,
-        navigation:true,
-        navigationText:["",""],
-        rewindNav : true,
-        scrollPerPage : false,
-        autoPlay:true,
-        responsive: true
-    });
+        $('.slider-logos').slick({
+               slidesToShow: 6,
+               slidesToScroll: 1,
+               autoplay: true,
+               autoplaySpeed: 1500,
+               arrows: true,
+               prevArrow: '<span class="slick-prev"></span>',
+               nextArrow: '<span class="slick-next"></span>',
+               dots: false,
+               pauseOnHover: false,
+               responsive: [{
+                   breakpoint: 768,
+                   settings: {
+                       slidesToShow: 4
+                   }
+               }, {
+                   breakpoint: 520,
+                   settings: {
+                       slidesToShow: 3
+                   }
+               }]
+           });
 
-    $("#logo-slider").owlCarousel({
-            items:5,
-            itemsDesktop:[1000,2],
-            itemsDesktopSmall:[980,1],
-            itemsTablet:[768,1],
-            pagination:false,
-            navigation:true,
-            navigationText:["",""],
-            rewindNav : true,
-            scrollPerPage : false,
-            autoPlay:true,
-            responsive: true
-        });
+          $(".slider-testimonial").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: true,
+            prevArrow: '<span class="slick-prev"></span>',
+            nextArrow: '<span class="slick-next"></span>',
+            dots: false,
+            pauseOnHover: true,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                slidesToShow: 2,
+                centerMode: false
+                }
+              },
+              {
+                breakpoint: 767,
+                settings: {
+                  slidesToShow: 1
+                }
+              }
+            ]
+          });
 
 
-/************* FILTER *******/
-var Shuffle = window.Shuffle;
-var element = document.querySelector('.my-shuffle-container');
-var sizer = element.querySelector('.my-sizer-element');
-
-var shuffleInstance = new Shuffle(element, {
-  itemSelector: '.picture-item',
-  sizer: sizer // could also be a selector: '.my-sizer-element'
-});
-// shuffleInstance.filter('animal');
-$("#all").on("click", function(){
-   shuffleInstance.filter();
-});
-$("#btn-animal").on("click", function(){
-   shuffleInstance.filter('animal');
-});
-$("#btn-city").on("click", function(){
-   shuffleInstance.filter('city');
-});
-$("#btn-nature").on("click", function(){
-   shuffleInstance.filter('nature');
-});
 
 
 
